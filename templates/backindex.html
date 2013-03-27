@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+    <meta name="generator" content="PSPad editor, www.pspad.com">
+    
+    <title>Back Index</title>
+    <meta name="keywords" content="options, charts, analysis" />
+	<meta name="description" content="Graphical tools for options analysis" />
+    <!--<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>-->
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  
+  <body>
+   	
+   
+   	<!-- --------------------------------------------------- WHOLE PAGE ---------------------------------------------------------------- -->
+   	<div id="wrapper">
+   
+		   	<!-- ------------------------------------------ HEADER MENU --------------------------------------------------------------- -->
+		  	<div id="header-wrapper">
+				<div id="header" class="container">
+					<div id="logo">
+						<h1><a href="#">BackIndex</a></h1>
+					</div>
+					<div id="menu">
+						<ul>
+							<li class="active"><a href="/" accesskey="1" title="">Inicio</a></li>
+							<!-- PENDING TO ADD ------------------------------------------------------------------
+							<li><a href="/signup" accesskey="2" title="">Sign up</a></li>
+							<li><a href="/signin" accesskey="3" title="">Sign in</a></li>
+							<li><a href="/about" accesskey="4" title="">About Us</a></li>
+							
+							<li><a href="#" accesskey="5" title="">Contact Us</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+  			<!-- ------------------------------------------- END HEADER MENU --------------------------------------------------------- -->
+  			
+  			<!-- ------------------------------------------- CONTENT ----------------------------------------------------------------- -->
+  			<div id="page" class="container">
+  			
+  				<!-- ------------------------------MAIN BOX ------------------------------- -->
+				<div id="content">
+					<div id="box1">
+						<form method="post">
+							<input type="submit" name="new" value="Nueva Entrada" />
+						</form>
+						</br>
+						<h2 class="title"><a href="#">Entradas existentes:</a></h2>
+					</div>
+					<div>
+						<ul class="style1">
+							{% for post in posts %}
+							<li class="first">
+								<h3>
+								<a href="/backpost?post={{ post.key }}">
+								<em><img src="static/images/{{ post.image }}" alt="" width="130" height="130" class="alignleft border" /></em>
+								{{ post.title }}
+								</a>
+								</h3>
+								<p>{{ post.introduction }}</p>		
+							</li>
+							{% endfor %}
+							
+						</ul>
+					</div>
+				</div>
+			
+				<!-- ------------------------------ END MAIN BOX ------------------------------- -->
+				
+				
+				
+				<!-- ------------------------------SIDE BAR ------------------------------- -->
+				<div id="sidebar">
+					<h2>Recursos</h2>
+					<ul class="style3">
+						<li class="first">
+							<p class="date">Demo</p>
+						
+						</li>
+						<li>
+							<p class="date">Suscripción</p>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+				<!-- ------------------------------END SIDE BAR ------------------------------- -->
+				
+				<div id="footer">
+					
+					<p>Esta es una versión Beta, BIXFactors no se hace responsable del uso de la información recogida de este site. 
+			    	
+			    	<br>
+			    	
+			    	
+					<p>Copyright (c) 2013 bixfactors.com. Todos los derechos reservados. Design by <a href="http://www.freecsstemplates.org">FCT</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+				</div>
+
+	
+	</div>
+	
+	
+	<!--  ANALYTICS 
+    <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39233430-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+	</script>
+	
+	-->
+	
+	
+	
+	
+	
+	
+  </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</html>
